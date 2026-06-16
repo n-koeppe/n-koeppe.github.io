@@ -1,883 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niklas Koeppe - PhD Researcher in Reinforcement Learning & Computational Neuroscience | KAIST</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Niklas Koeppe is a PhD researcher at KAIST specializing in reinforcement learning, computational neuroscience, continual learning, and biologically-inspired AI. Expert in custom RL frameworks, energy-efficient computation, and plasticity mechanisms.">
-    <meta name="keywords" content="Niklas Koeppe, reinforcement learning, computational neuroscience, continual learning, KAIST, PhD researcher, artificial intelligence, machine learning, biologically inspired AI, plasticity, energy efficient computing, PPO, neural networks, dendrites, gating mechanisms">
-    <meta name="author" content="Niklas Koeppe">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://niklaskoeppe.github.io/">
-    <meta property="og:title" content="Niklas Koeppe - PhD Researcher in Reinforcement Learning & Computational Neuroscience">
-    <meta property="og:description" content="PhD researcher at KAIST exploring biologically-inspired learning systems, continual learning, and energy-efficient computation in artificial intelligence.">
-    <meta property="og:image" content="https://niklaskoeppe.github.io/og-image.jpg">
-    <meta property="og:site_name" content="Niklas Koeppe Research">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://niklaskoeppe.github.io/">
-    <meta property="twitter:title" content="Niklas Koeppe - PhD Researcher in RL & Neuroscience">
-    <meta property="twitter:description" content="PhD researcher at KAIST exploring biologically-inspired learning systems, continual learning, and energy-efficient computation.">
-    <meta property="twitter:image" content="https://niklaskoeppe.github.io/twitter-image.jpg">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://niklaskoeppe.github.io/">
-    
-    <!-- Structured Data - JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Niklas Koeppe",
-      "jobTitle": "PhD Researcher",
-      "affiliation": {
-        "@type": "Organization",
-        "name": "Korea Advanced Institute of Science and Technology",
-        "alternateName": "KAIST"
-      },
-      "description": "PhD researcher specializing in reinforcement learning, computational neuroscience, and biologically-inspired artificial intelligence",
-      "knowsAbout": [
-        "Reinforcement Learning",
-        "Computational Neuroscience",
-        "Continual Learning",
-        "Machine Learning",
-        "Artificial Intelligence",
-        "Energy-Efficient Computing",
-        "Biologically-Inspired AI",
-        "Neural Networks",
-        "Plasticity Mechanisms"
-      ],
-      "alumniOf": {
-        "@type": "Organization",
-        "name": "Radboud University"
-      },
-      "nationality": "German",
-      "workLocation": {
-        "@type": "Place",
-        "name": "Daejeon, South Korea"
-      },
-      "email": "nkoeppe@kaist.ac.kr",
-      "url": "https://niklaskoeppe.github.io",
-      "sameAs": [
-        "https://scholar.google.com/citations?user=PLACEHOLDER",
-        "https://www.linkedin.com/in/niklas-koeppe",
-        "https://github.com/niklaskoeppe",
-        "https://orcid.org/PLACEHOLDER"
-      ]
-    }
-    </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #6366f1;
-            --secondary-color: #8b5cf6;
-            --accent-color: #06b6d4;
-            --text-primary: #1f2937;
-            --text-secondary: #6b7280;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --bg-dark: #0f172a;
-            --border-color: #e5e7eb;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--bg-primary);
-            overflow-x: hidden;
-        }
-
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            text-align: center;
-            color: white;
-            z-index: 2;
-            max-width: 800px;
-            padding: 0 2rem;
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            opacity: 0;
-            animation: slideUp 1s ease 0.5s forwards;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            margin-bottom: 2rem;
-            opacity: 0;
-            animation: slideUp 1s ease 0.7s forwards;
-        }
-
-        .hero-description {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            opacity: 0;
-            animation: slideUp 1s ease 0.9s forwards;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: slideUp 1s ease 1.1s forwards;
-        }
-
-        .btn {
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary-color);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-
-        /* Sections */
-        .section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--bg-secondary);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-        }
-
-        .about-image {
-            position: relative;
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: 20px;
-            bottom: 20px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 20px;
-            z-index: -1;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .skill-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .skill-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .skill-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* Projects Section */
-        .projects {
-            background: var(--bg-secondary);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-image {
-            height: 200px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-image::before {
-            content: '🚀';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
-            opacity: 0.3;
-        }
-
-        .project-content {
-            padding: 2rem;
-        }
-
-        .project-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--text-primary);
-        }
-
-        .project-content p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tag {
-            padding: 0.3rem 0.8rem;
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-links a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .project-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Contact Section */
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .contact-info {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: var(--text-primary);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: var(--bg-secondary);
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateX(5px);
-        }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .contact-form {
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bg-dark);
-            color: white;
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Animations */
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 250px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Niklas Koeppe is a PhD candidate at KAIST working on continual reinforcement learning, architectural plasticity, and neuroscience-inspired AI." />
+  <title>Niklas Koeppe | Continual Reinforcement Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Niklas Koeppe</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="#top">NK</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Niklas Koeppe</h1>
-            <p class="hero-subtitle">PhD Researcher in Reinforcement Learning & Computational Neuroscience</p>
-            <p class="hero-description">Building biologically inspired learning systems that adapt dynamically without explicit task boundaries. Exploring continual learning, plasticity, and energy-efficient computation at KAIST, South Korea.</p>
-            <div class="cta-buttons">
-                <a href="#research" class="btn btn-primary">View Research</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="eyebrow">PhD Candidate · KAIST</p>
+        <h1>Niklas Koeppe</h1>
+        <p class="lead">
+          I study how artificial agents can remain adaptive in dynamic environments without losing the ability to learn.
+          My work connects continual reinforcement learning, architectural plasticity, and computational neuroscience.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#publications">View publications</a>
+          <a class="button" href="CV_Niklas_Koeppe.pdf">Download CV</a>
         </div>
+      </div>
+      <aside class="hero-card" aria-label="Research snapshot">
+        <span class="card-label">Research focus</span>
+        <h2>Continual RL through architectural design</h2>
+        <p>
+          Designing neural architectures that preserve past knowledge while remaining plastic enough to adapt to new tasks.
+        </p>
+      </aside>
     </section>
 
-    <section id="about" class="section about">
-        <h2 class="section-title fade-in">About Niklas Koeppe</h2>
-        <div class="about-content">
-            <div class="about-text fade-in">
-                <p>I'm a 24-year-old German researcher pursuing a PhD in <strong>reinforcement learning and computational neuroscience</strong> at the <strong>Korea Advanced Institute of Science and Technology (KAIST)</strong>. My research focuses on <strong>continual learning, plasticity mechanisms, and energy-efficient computation</strong>, exploring biologically inspired learning mechanisms in artificial agents.</p>
-                <br>
-                <p>I combine rigorous theoretical modeling with hands-on implementation in custom RL frameworks, developing systems that can <strong>adapt dynamically without explicit task boundaries</strong>. My work bridges the gap between neuroscience and artificial intelligence, investigating how biological principles like <strong>dendritic computation and interneuron gating</strong> can inform more robust and efficient learning algorithms.</p>
-                <br>
-                <p>With a <strong>BSc in Artificial Intelligence (Cum Laude) from Radboud University</strong>, I bring expertise in machine learning, cognitive science, and computational modeling. Beyond research, I'm passionate about quantitative trading, fitness optimization, and applying systematic approaches to both work and lifestyle domains.</p>
-            </div>
-            <div class="about-image fade-in">
-                <div style="width: 100%; height: 400px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">👨‍💻</div>
-            </div>
-        </div>
+    <section id="about" class="section two-column">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Building adaptive learning systems</h2>
+      </div>
+      <div class="content-stack">
+        <p>
+          I am an integrated MS/PhD student in Brain and Cognitive Engineering at the Korea Advanced Institute of Science
+          and Technology, advised by Prof. Sang Wan Lee. My research asks how learning systems can handle continual change:
+          preserving useful structure, avoiding plasticity loss, and reallocating computation when the environment changes.
+        </p>
+        <p>
+          Methodologically, I combine reinforcement learning experiments with architectural interventions and theory-driven
+          analysis. I am especially interested in stability-plasticity trade-offs, dynamic computation, and neural mechanisms
+          that can inspire more robust artificial agents.
+        </p>
+      </div>
     </section>
 
-    <section id="skills" class="section">
-        <h2 class="section-title fade-in">Skills & Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <div class="skill-icon">🧠</div>
-                <h3>Reinforcement Learning Research</h3>
-                <p><strong>Custom PPO implementations</strong>, continual learning under shifting task distributions, <strong>empowerment vs. plasticity modeling</strong>, and dynamic gating mechanisms for adaptive agents. Expertise in <strong>MinAtar environments</strong> and custom grid-world setups.</p>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon">🔬</div>
-                <h3>Computational Neuroscience</h3>
-                <p>Modeling <strong>dendritic error learning</strong>, local learning rules, <strong>interneuron-inspired gating</strong>, and biological inspiration in RL architectures. Research on <strong>pyramidal neurons</strong> and compartmental models with formal analysis.</p>
-            </div>
-            <div class="skill-card fade-in">
-                <div class="skill-icon">💻</div>
-                <h3>Technical Implementation</h3>
-                <p><strong>Python (PyTorch, NumPy)</strong>, scientific computing, <strong>LaTeX with TikZ</strong>, Git, Linux scripting, and <strong>energy-efficient RL training pipelines</strong> with selective computation and sparse mechanisms.</p>
-            </div>
-        </div>
+    <section id="research" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Research</p>
+        <h2>Current directions</h2>
+      </div>
+      <div class="grid three">
+        <article class="tile">
+          <h3>Interpolation Layers</h3>
+          <p>
+            A drop-in architectural mechanism for continual learning that interpolates between stable and learnable pathways,
+            helping networks preserve adaptability across task shifts.
+          </p>
+          <div class="tags"><span>Continual learning</span><span>Plasticity</span><span>RL</span></div>
+        </article>
+        <article class="tile">
+          <h3>Dynamic time perception</h3>
+          <p>
+            Temporal skipping mechanisms for RL agents that adapt internal computation to cognitive load, reducing compute
+            while preserving task performance.
+          </p>
+          <div class="tags"><span>Selective computation</span><span>Temporal abstraction</span><span>Efficiency</span></div>
+        </article>
+        <article class="tile">
+          <h3>Neuroscience-inspired AI</h3>
+          <p>
+            Bridging reinforcement learning and computational neuroscience to turn principles of neural dynamics into practical
+            learning algorithms for non-stationary environments.
+          </p>
+          <div class="tags"><span>Neural dynamics</span><span>Architectures</span><span>Agents</span></div>
+        </article>
+      </div>
     </section>
 
-    <section id="research" class="section projects">
-        <h2 class="section-title fade-in">Research Projects & Publications</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3>Dynamic Gating in Continual Reinforcement Learning</h3>
-                    <p>Developing <strong>custom RL agents with dynamic gating layers</strong> to modulate plasticity and empowerment trade-offs. Investigating how <strong>biological gating mechanisms</strong> can improve continual learning performance without catastrophic forgetting. Target venues: <strong>NeurIPS, RLDM</strong>.</p>
-                    <div class="project-tags">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">PPO</span>
-                        <span class="tag">Continual Learning</span>
-                        <span class="tag">Neuroscience</span>
-                        <span class="tag">Gating Mechanisms</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#">Paper (Forthcoming)</a>
-                        <a href="#">Code Repository</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3>Energy-Efficient RL Training Pipelines</h3>
-                    <p>Implementing <strong>selective computation mechanisms</strong> with dynamic skipping based on hidden activation changes. Exploring <strong>sparse computation under capacity constraints</strong> for more sustainable AI training and inference.</p>
-                    <div class="project-tags">
-                        <span class="tag">Energy Efficiency</span>
-                        <span class="tag">Sparse Computing</span>
-                        <span class="tag">MinAtar</span>
-                        <span class="tag">Activation Dynamics</span>
-                        <span class="tag">Green AI</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#">Preprint</a>
-                        <a href="#">GitHub Repository</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-image"></div>
-                <div class="project-content">
-                    <h3>Biologically-Inspired Dendritic Learning</h3>
-                    <p>Connecting <strong>gating frameworks to biological models</strong> of pyramidal neurons. Investigating how <strong>dendritic computation and local learning rules</strong> can inform more biologically plausible and efficient learning algorithms in artificial systems.</p>
-                    <div class="project-tags">
-                        <span class="tag">Dendritic Computing</span>
-                        <span class="tag">Local Learning</span>
-                        <span class="tag">Pyramidal Neurons</span>
-                        <span class="tag">Bio-inspired AI</span>
-                        <span class="tag">Error Backpropagation</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#">Research Notes</a>
-                        <a href="#">Implementation</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="publications" class="section two-column">
+      <div>
+        <p class="eyebrow">Publications</p>
+        <h2>Selected work</h2>
+      </div>
+      <div class="publication-list">
+        <article class="publication">
+          <p class="pub-venue">ICML 2026</p>
+          <h3>Mitigating Plasticity Loss through Architectural Design in Continual Learning</h3>
+          <p class="authors"><strong>N. Koeppe</strong>, L. F. Vecchietti, D. Han, D. Li, S. W. Lee</p>
+          <p>
+            Introduces Interpolation Layers as an architectural approach for preserving adaptability in continual learning settings.
+          </p>
+        </article>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2 class="section-title fade-in">Let's Work Together</h2>
-        <div class="contact-content">
-            <div class="contact-info fade-in">
-                <h3>Get In Touch</h3>
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div>
-                        <strong>Email</strong><br>
-                        nkoeppe@kaist.ac.kr
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <div>
-                        <strong>Phone</strong><br>
-                        tba
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div>
-                        <strong>Location</strong><br>
-                        KAIST, Daejeon, South Korea
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form fade-in">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                </form>
-            </div>
-        </div>
+    <section id="experience" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Experience & education</p>
+        <h2>Background</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="date">2023 - present</span>
+          <div>
+            <h3>KAIST · Integrated MS/PhD Program</h3>
+            <p>Brain and Cognitive Engineering. Advisor: Prof. Sang Wan Lee.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="date">Mar - Jun 2026</span>
+          <div>
+            <h3>Microsoft Research Asia · Research Intern</h3>
+            <p>Research on continual reinforcement learning and architecture-based methods for preserving neural plasticity.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="date">2019 - 2022</span>
+          <div>
+            <h3>Radboud University · BSc Artificial Intelligence</h3>
+            <p>Cum laude. Thesis on biologically inspired recurrent neural networks for multi-source sound categorization and localization.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <span class="date">2022</span>
+          <div>
+            <h3>Sungkyunkwan University · Exchange semester</h3>
+            <p>Applied Artificial Intelligence.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <footer>
-        <div class="social-links">
-            <a href="#">🐙</a>
-            <a href="#">💼</a>
-            <a href="#">🐦</a>
-            <a href="#">📧</a>
-        </div>
-        <p>&copy; 2025 Niklas Koeppe. All rights reserved.</p>
-    </footer>
+    <section id="skills" class="section two-column">
+      <div>
+        <p class="eyebrow">Technical profile</p>
+        <h2>Tools and interests</h2>
+      </div>
+      <div class="content-stack">
+        <p>
+          <strong>Programming:</strong> Python, PyTorch, scikit-learn, Keras, Java, Scala, Lua, SQL, AWS.
+        </p>
+        <p>
+          <strong>Research areas:</strong> reinforcement learning, continual learning, computational neuroscience,
+          data mining, deep learning, and adaptive neural architectures.
+        </p>
+        <p>
+          <strong>Languages:</strong> German, English, Korean, Chinese.
+        </p>
+      </div>
+    </section>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <section id="contact" class="section contact-card">
+      <p class="eyebrow">Contact</p>
+      <h2>Get in touch</h2>
+      <p>
+        I am based at KAIST in Daejeon, South Korea. For research questions, collaborations, or academic correspondence,
+        email me at <a href="mailto:nkoeppe@kaist.ac.kr">nkoeppe@kaist.ac.kr</a>.
+      </p>
+    </section>
+  </main>
 
-        // Fade in animation on scroll
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        fadeElements.forEach(element => {
-            observer.observe(element);
-        });
-
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        });
-
-        // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            this.reset();
-        });
-
-        // Add some interactive hover effects
-        document.querySelectorAll('.project-card, .skill-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-    </script>
+  <footer>
+    <p>© 2026 Niklas Koeppe</p>
+  </footer>
 </body>
 </html>
