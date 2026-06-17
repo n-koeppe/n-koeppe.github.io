@@ -2,187 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Niklas Koeppe is a PhD candidate at KAIST working on continual reinforcement learning, architectural plasticity, and neuroscience-inspired AI." />
-  <title>Niklas Koeppe | Continual Reinforcement Learning</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Niklas Koeppe is a PhD student at KAIST working on continual reinforcement learning, architectural plasticity, and neuroscience-inspired AI." />
+  <title>Niklas Koeppe</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
-      <a class="logo" href="#top">NK</a>
-      <div class="nav-links">
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+  <nav class="topbar">
+    <div class="nav-inner">
+      <a class="site-title" href="#top">Niklas Koeppe</a>
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="#about">about me</a>
+        <a href="#research">research</a>
+        <a href="#publications">publications</a>
+        <a href="CV_Niklas_Koeppe.pdf">cv</a>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main id="top">
-    <section class="hero section">
-      <div class="hero-copy">
-        <p class="eyebrow">PhD Candidate · KAIST</p>
+  <main id="top" class="page">
+    <header class="intro">
+      <div class="portrait-wrap">
+        <img class="portrait" src="profile.jpg" alt="Niklas Koeppe" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="portrait portrait-fallback" aria-hidden="true">NK</div>
+      </div>
+
+      <div class="intro-text">
         <h1>Niklas Koeppe</h1>
-        <p class="lead">
-          I study how artificial agents can remain adaptive in dynamic environments without losing the ability to learn.
-          My work connects continual reinforcement learning, architectural plasticity, and computational neuroscience.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#publications">View publications</a>
-          <a class="button" href="CV_Niklas_Koeppe.pdf">Download CV</a>
-        </div>
-      </div>
-      <aside class="hero-card" aria-label="Research snapshot">
-        <span class="card-label">Research focus</span>
-        <h2>Continual RL through architectural design</h2>
+        <p class="role">PhD Candidate</p>
+        <p class="affiliation">Brain and Cognitive Engineering<br />KAIST, Daejeon, South Korea</p>
         <p>
-          Designing neural architectures that preserve past knowledge while remaining plastic enough to adapt to new tasks.
-        </p>
-      </aside>
-    </section>
-
-    <section id="about" class="section two-column">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2>Building adaptive learning systems</h2>
-      </div>
-      <div class="content-stack">
-        <p>
-          I am an integrated MS/PhD student in Brain and Cognitive Engineering at the Korea Advanced Institute of Science
-          and Technology, advised by Prof. Sang Wan Lee. My research asks how learning systems can handle continual change:
-          preserving useful structure, avoiding plasticity loss, and reallocating computation when the environment changes.
+          I work on continual reinforcement learning and neuroscience-inspired AI. Broadly, I am interested in how artificial agents can keep learning in changing environments without becoming brittle, forgetting what they already know, or losing the ability to adapt.
         </p>
         <p>
-          Methodologically, I combine reinforcement learning experiments with architectural interventions and theory-driven
-          analysis. I am especially interested in stability-plasticity trade-offs, dynamic computation, and neural mechanisms
-          that can inspire more robust artificial agents.
+          My current work focuses on architectural mechanisms for preserving plasticity in neural networks. Instead of only asking how to train agents better, I ask whether we can design networks that are structurally better suited for long-term adaptation.
+        </p>
+        <p class="links">
+          <a href="mailto:nkoeppe@kaist.ac.kr">Email</a> /
+          <a href="https://github.com/n-koeppe">GitHub</a> /
+          <a href="CV_Niklas_Koeppe.pdf">CV</a>
         </p>
       </div>
-    </section>
+    </header>
 
-    <section id="research" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Research</p>
-        <h2>Current directions</h2>
-      </div>
-      <div class="grid three">
-        <article class="tile">
-          <h3>Interpolation Layers</h3>
-          <p>
-            A drop-in architectural mechanism for continual learning that interpolates between stable and learnable pathways,
-            helping networks preserve adaptability across task shifts.
-          </p>
-          <div class="tags"><span>Continual learning</span><span>Plasticity</span><span>RL</span></div>
-        </article>
-        <article class="tile">
-          <h3>Dynamic time perception</h3>
-          <p>
-            Temporal skipping mechanisms for RL agents that adapt internal computation to cognitive load, reducing compute
-            while preserving task performance.
-          </p>
-          <div class="tags"><span>Selective computation</span><span>Temporal abstraction</span><span>Efficiency</span></div>
-        </article>
-        <article class="tile">
-          <h3>Neuroscience-inspired AI</h3>
-          <p>
-            Bridging reinforcement learning and computational neuroscience to turn principles of neural dynamics into practical
-            learning algorithms for non-stationary environments.
-          </p>
-          <div class="tags"><span>Neural dynamics</span><span>Architectures</span><span>Agents</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="publications" class="section two-column">
-      <div>
-        <p class="eyebrow">Publications</p>
-        <h2>Selected work</h2>
-      </div>
-      <div class="publication-list">
-        <article class="publication">
-          <p class="pub-venue">ICML 2026</p>
-          <h3>Mitigating Plasticity Loss through Architectural Design in Continual Learning</h3>
-          <p class="authors"><strong>N. Koeppe</strong>, L. F. Vecchietti, D. Han, D. Li, S. W. Lee</p>
-          <p>
-            Introduces Interpolation Layers as an architectural approach for preserving adaptability in continual learning settings.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Experience & education</p>
-        <h2>Background</h2>
-      </div>
-      <div class="timeline">
-        <article class="timeline-item">
-          <span class="date">2023 - present</span>
-          <div>
-            <h3>KAIST · Integrated MS/PhD Program</h3>
-            <p>Brain and Cognitive Engineering. Advisor: Prof. Sang Wan Lee.</p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <span class="date">Mar - Jun 2026</span>
-          <div>
-            <h3>Microsoft Research Asia · Research Intern</h3>
-            <p>Research on continual reinforcement learning and architecture-based methods for preserving neural plasticity.</p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <span class="date">2019 - 2022</span>
-          <div>
-            <h3>Radboud University · BSc Artificial Intelligence</h3>
-            <p>Cum laude. Thesis on biologically inspired recurrent neural networks for multi-source sound categorization and localization.</p>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <span class="date">2022</span>
-          <div>
-            <h3>Sungkyunkwan University · Exchange semester</h3>
-            <p>Applied Artificial Intelligence.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="section two-column">
-      <div>
-        <p class="eyebrow">Technical profile</p>
-        <h2>Tools and interests</h2>
-      </div>
-      <div class="content-stack">
-        <p>
-          <strong>Programming:</strong> Python, PyTorch, scikit-learn, Keras, Java, Scala, Lua, SQL, AWS.
-        </p>
-        <p>
-          <strong>Research areas:</strong> reinforcement learning, continual learning, computational neuroscience,
-          data mining, deep learning, and adaptive neural architectures.
-        </p>
-        <p>
-          <strong>Languages:</strong> German, English, Korean, Chinese.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-card">
-      <p class="eyebrow">Contact</p>
-      <h2>Get in touch</h2>
+    <section id="about">
+      <h2>About me</h2>
       <p>
-        I am based at KAIST in Daejeon, South Korea. For research questions, collaborations, or academic correspondence,
-        email me at <a href="mailto:nkoeppe@kaist.ac.kr">nkoeppe@kaist.ac.kr</a>.
+        I am an integrated MS/PhD student at the Korea Advanced Institute of Science and Technology, advised by Prof. Sang Wan Lee. Before coming to KAIST, I studied Artificial Intelligence at Radboud University in the Netherlands and spent an exchange semester in Applied Artificial Intelligence at Sungkyunkwan University.
+      </p>
+      <p>
+        I like research problems that sit between algorithm design, learning dynamics, and cognitive science. Many of the questions I care about come from a simple intuition: biological learning systems are rarely trained once and then frozen. They keep adapting, but usually without completely destroying what was useful before. I want to understand how to bring some of that robustness into artificial agents.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research interests</h2>
+      <p>My general research interests include reinforcement learning, continual learning, computational neuroscience, and adaptive neural architectures. I am particularly interested in:</p>
+      <ul>
+        <li><strong>Continual reinforcement learning:</strong> agents that remain useful under task shifts, environmental change, and long training horizons.</li>
+        <li><strong>Architectural plasticity:</strong> neural network layers and mechanisms that preserve adaptability as part of the model design, not only through extra losses or replay buffers.</li>
+        <li><strong>Dynamic computation:</strong> systems that learn when to spend computation and when to skip, reuse, or compress internal processing.</li>
+        <li><strong>Neuroscience-inspired AI:</strong> using ideas from neural dynamics and cognitive control to build more robust learning systems.</li>
+      </ul>
+      <p>
+        A recurring theme in my work is the stability-plasticity trade-off: how can an agent preserve useful structure while still changing when the world changes?
+      </p>
+    </section>
+
+    <section id="publications">
+      <h2>Selected publications</h2>
+      <ol class="publications">
+        <li>
+          <p class="paper-title">Mitigating Plasticity Loss through Architectural Design in Continual Learning</p>
+          <p><strong>Koeppe, N.</strong>, Vecchietti, L. F., Han, D., Li, D., Lee, S. W.</p>
+          <p>Proceedings of the International Conference on Machine Learning (ICML), 2026.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects">
+      <h2>Selected projects</h2>
+      <h3>Interpolation Layers</h3>
+      <p>
+        Interpolation Layers are a simple drop-in replacement for standard neural network layers that help networks maintain adaptability in continual learning settings by interpolating between a stable pathway and a learnable pathway.
+      </p>
+
+      <h3>Dynamic time perception for reinforcement learning</h3>
+      <p>
+        This project studies whether RL agents can save computation by dynamically skipping internal updates when the environment or hidden state changes slowly. The goal is not just efficiency, but a more cognitive view of when an agent needs detailed temporal processing.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Education and experience</h2>
+      <div class="entry">
+        <p class="entry-date">2023–present</p>
+        <p><strong>KAIST</strong> — Integrated MS/PhD Program in Brain and Cognitive Engineering</p>
+        <p>Advisor: Prof. Sang Wan Lee. Expected graduation: February 2028.</p>
+      </div>
+      <div class="entry">
+        <p class="entry-date">Mar 2026–Jun 2026</p>
+        <p><strong>Microsoft Research Asia</strong> — Research Intern</p>
+        <p>Continual reinforcement learning and architecture-based methods for preserving neural plasticity.</p>
+      </div>
+      <div class="entry">
+        <p class="entry-date">2019–2022</p>
+        <p><strong>Radboud University</strong> — BSc Artificial Intelligence, cum laude</p>
+        <p>Thesis on biologically inspired recurrent neural networks for multi-source sound categorization and localization.</p>
+      </div>
+      <div class="entry">
+        <p class="entry-date">2022</p>
+        <p><strong>Sungkyunkwan University</strong> — Exchange Semester in Applied Artificial Intelligence</p>
+      </div>
+    </section>
+
+    <section id="personal">
+      <h2>Personal interests</h2>
+      <p>
+        Outside research, I spend a lot of time running and thinking about training. I also enjoy languages, travel, and reading about politics and behavioral science. I am from Germany and currently live in South Korea.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        The easiest way to reach me is by email: <a href="mailto:nkoeppe@kaist.ac.kr">nkoeppe@kaist.ac.kr</a>.
       </p>
     </section>
   </main>
 
-  <footer>
-    <p>© 2026 Niklas Koeppe</p>
+  <footer class="footer">
+    <p>Niklas Koeppe &nbsp;•&nbsp; 2026 &nbsp;•&nbsp; <a href="#top">back to top</a></p>
   </footer>
 </body>
 </html>
