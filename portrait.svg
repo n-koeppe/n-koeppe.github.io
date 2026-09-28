@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 300" role="img" aria-label="Niklas Koeppe initials">
+  <rect width="260" height="300" fill="#e6efee"/>
+  <path d="M0 238 260 120M0 264 260 146" stroke="#cddfdb" stroke-width="1"/>
+  <circle cx="130" cy="145" r="75" fill="none" stroke="#9abbb5" stroke-width="1"/>
+  <text x="130" y="164" text-anchor="middle" fill="#006c66" font-family="Arial, sans-serif" font-size="52" font-weight="300" letter-spacing="-4">NK</text>
+</svg>

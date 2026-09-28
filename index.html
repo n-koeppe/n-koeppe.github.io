@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Niklas Koeppe is a PhD student at KAIST researching continual reinforcement learning and neural network plasticity.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Niklas Koeppe</title>
+  <link rel="canonical" href="https://n-koeppe.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <div class="social-links">
+        <a href="mailto:nkoeppe@kaist.ac.kr" aria-label="Email Niklas" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
+        <a href="https://github.com/n-koeppe" aria-label="Niklas on GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.4 1.4-4.4-2.5-6-3m12 6v-3.4a3 3 0 0 0-.8-2.3c2.7-.3 5.5-1.3 5.5-6A4.7 4.7 0 0 0 18.4 7a4.3 4.3 0 0 0-.1-3.2S17.3 3.5 15 5a10.6 10.6 0 0 0-6 0C6.7 3.5 5.7 3.8 5.7 3.8A4.3 4.3 0 0 0 5.6 7a4.7 4.7 0 0 0-1.3 3.3c0 4.7 2.8 5.7 5.5 6A3 3 0 0 0 9 18.6V22"/></svg></a>
+      </div>
+      <div class="nav-links">
+        <a href="#about" aria-current="page">about</a><a href="#research">research</a><a href="#news">news</a><a href="#publications">publications</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle color theme"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z"/></svg></button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="page"><article>
+    <header id="about" class="profile-header">
+      <h1><strong>Niklas</strong> Koeppe</h1>
+      <p class="subtitle"><a href="https://www.kaist.ac.kr/en/">Korea Advanced Institute of Science and Technology (KAIST)</a></p>
+    </header>
+
+    <div class="introduction">
+      <figure class="profile-photo"><img src="portrait.svg" alt="Niklas Koeppe initials; portrait placeholder" width="260" height="300"></figure>
+      <p>Hi! I am Niklas, an integrated MS/PhD student in Brain and Cognitive Engineering at KAIST, advised by Prof. Sang Wan Lee. I study how artificial agents can keep learning as their environments change.</p>
+      <p>My research focuses on <strong>continual reinforcement learning</strong> and neural network plasticity. I am especially interested in simple architectural changes that help agents adapt to new experiences while retaining what they have learned.</p>
+      <p>Before KAIST, I studied Artificial Intelligence at Radboud University in the Netherlands and spent an exchange semester at Sungkyunkwan University. I also worked as a research intern at Microsoft Research Asia.</p>
+      <p>Feel free to <a href="mailto:nkoeppe@kaist.ac.kr">get in touch</a> if you would like to talk about research or collaborate.</p>
+    </div>
+
+    <section id="research">
+      <h2>research interests</h2>
+      <p>I work at the intersection of reinforcement learning, continual learning, and computational neuroscience. A recurring question is how an agent can preserve useful knowledge while remaining able to change when the world changes.</p>
+      <ol class="research-list">
+        <li><strong>Continual reinforcement learning:</strong> learning across task shifts and long training horizons without losing the ability to adapt.</li>
+        <li><strong>Architectural plasticity:</strong> designing neural networks whose structure supports both stability and new learning.</li>
+        <li><strong>Adaptive computation:</strong> deciding when to compute, reuse, or skip internal processing.</li>
+      </ol>
+      <p class="keywords"><span>⤷ keywords</span><br>continual learning, reinforcement learning, plasticity, adaptive architectures, computational neuroscience</p>
+    </section>
+
+    <section id="news">
+      <h2>news</h2>
+      <div class="news-list">
+        <div class="news-item"><time datetime="2026-07">Jul 2026</time><p>Presented <a href="https://openreview.net/forum?id=pAhGjPOlwy">“Mitigating Plasticity Loss through Architectural Design in Continual Learning”</a> at ICML 2026 in Seoul.</p></div>
+        <div class="news-item"><time datetime="2026-03">Mar 2026</time><p>Started a research internship at Microsoft Research Asia, working on continual reinforcement learning.</p></div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>selected publications</h2>
+      <ol class="publications"><li class="publication">
+        <div class="venue"><span>ICML 2026</span></div>
+        <div class="publication-info">
+          <h3>Mitigating Plasticity Loss through Architectural Design in Continual Learning</h3>
+          <p class="authors"><strong>Niklas Koeppe</strong>, Luiz Felipe Vecchietti, Dongqi Han, Dongsheng Li, Sang Wan Lee</p>
+          <p class="journal">Proceedings of the 43rd International Conference on Machine Learning, 2026</p>
+          <div class="paper-links">
+            <details class="abstract"><summary>Abs</summary><p>We study how neural network architecture affects plasticity in continual learning. Interpolation Layers combine a stable reference with a learnable projection to help networks remain adaptable across changing tasks.</p></details>
+            <a href="https://openreview.net/forum?id=pAhGjPOlwy">Paper</a><a href="https://openreview.net/pdf?id=pAhGjPOlwy">PDF</a><a href="https://github.com/n-koeppe/InterpLayer">Code</a>
+          </div>
+        </div>
+      </li></ol>
+    </section>
+
+    <section id="projects">
+      <h2>selected projects</h2>
+      <div class="project"><h3><a href="https://github.com/n-koeppe/InterpLayer">Interpolation Layers</a></h3><p>A layer design that combines a stable reference pathway with a learnable projection to support adaptation during continual learning.</p></div>
+      <div class="project"><h3>Dynamic time perception for reinforcement learning</h3><p>Exploring whether agents can save computation by skipping internal updates when the environment changes slowly.</p></div>
+    </section>
+
+    <section id="background">
+      <h2>background</h2>
+      <div class="background-item"><span>2023–present</span><p><strong>KAIST</strong> · Integrated MS/PhD in Brain and Cognitive Engineering</p></div>
+      <div class="background-item"><span>2026</span><p><strong>Microsoft Research Asia</strong> · Research intern</p></div>
+      <div class="background-item"><span>2019–2022</span><p><strong>Radboud University</strong> · BSc in Artificial Intelligence, cum laude</p></div>
+      <div class="background-item"><span>2022</span><p><strong>Sungkyunkwan University</strong> · Exchange in Applied Artificial Intelligence</p></div>
+    </section>
+
+    <section id="personal"><h2>outside research</h2><p>I enjoy cycling, running, languages, travel, and reading about politics and behavioral science. I am from Germany and currently live in South Korea.</p></section>
+    <div class="contact"><p><a href="mailto:nkoeppe@kaist.ac.kr">nkoeppe@kaist.ac.kr</a> · Daejeon, South Korea</p></div>
+  </article></main>
+
+  <footer class="site-footer"><div class="footer-inner"><span>© 2026 Niklas Koeppe</span><a href="#top">back to top ↑</a></div></footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
